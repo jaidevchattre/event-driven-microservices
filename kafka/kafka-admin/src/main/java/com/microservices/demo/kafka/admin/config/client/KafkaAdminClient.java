@@ -51,7 +51,7 @@ public class KafkaAdminClient {
         checkTopicsCreated();
     }
 
-    private void checkTopicsCreated() {
+    public void checkTopicsCreated() {
         Collection<TopicListing> topics = getTopics();
         int retryCount=1;
         Integer maxRetry=retryConfigData.getMaxAttempts();
@@ -75,7 +75,7 @@ public class KafkaAdminClient {
         Integer multiplier =retryConfigData.getMultiplier().intValue();
         Long sleepTimeMs=retryConfigData.getSleepTimeMs();
         for(String topic: kafkaConfigData.getTopicNamesToCreate()){
-            while(getSchemaRegistryStatus().is2xxSuccessful()){
+            while(!getSchemaRegistryStatus().is2xxSuccessful()){
                 checkMaxRetry(retryCount++,maxRetry);
                 sleep(sleepTimeMs);
                 sleepTimeMs *=multiplier;
@@ -88,9 +88,10 @@ public class KafkaAdminClient {
 
     private HttpStatus getSchemaRegistryStatus(){
         try {
+
             return webClient
                     .method(HttpMethod.GET)
-                    .uri(kafkaConfigData.getSchemaRegistryUri())
+                    .uri(kafkaConfigData.getSchemaRegistryUrl())
                     .exchange()
                     .map(ClientResponse::statusCode)
                     .block();
