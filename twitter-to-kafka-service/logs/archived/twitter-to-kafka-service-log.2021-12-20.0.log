@@ -1,0 +1,1882 @@
+2021-12-20 00:04:36 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication using Java 1.8.0_202 on DESKTOP-HD6CG2B with PID 23420 (C:\Workspaces\EventDrivenMicroservices\microservices-demo\twitter-to-kafka-service\target\classes started by DELL in C:\Workspaces\EventDrivenMicroservices\microservices-demo)
+2021-12-20 00:04:36 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - No active profile set, falling back to default profiles: default
+2021-12-20 00:04:38 [main] INFO  o.a.k.c.admin.AdminClientConfig - AdminClientConfig values: 
+	bootstrap.servers = [localhost:19092, localhost:29092, localhost:39092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2021-12-20 00:04:39 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.0.0
+2021-12-20 00:04:39 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 8cb0a5e9d3441962
+2021-12-20 00:04:39 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1639938879030
+2021-12-20 00:04:39 [main] WARN  o.s.b.w.r.c.AnnotationConfigReactiveWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.boot.autoconfigure.kafka.KafkaAnnotationDrivenConfiguration': Unexpected exception during bean creation; nested exception is java.lang.TypeNotPresentException: Type org.springframework.kafka.listener.CommonErrorHandler not present
+2021-12-20 00:04:39 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.utils.AppInfoParser - App info kafka.admin.client for adminclient-1 unregistered
+2021-12-20 00:04:39 [kafka-admin-client-thread | adminclient-1] INFO  o.a.k.c.a.i.AdminMetadataManager - [AdminClient clientId=adminclient-1] Metadata update failed
+org.apache.kafka.common.errors.TimeoutException: Timed out waiting to send the call. Call: fetchMetadata
+2021-12-20 00:04:39 [kafka-admin-client-thread | adminclient-1] INFO  o.a.k.clients.admin.KafkaAdminClient - [AdminClient clientId=adminclient-1] Timed out 1 remaining operation(s) during close.
+2021-12-20 00:04:39 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+2021-12-20 00:04:39 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2021-12-20 00:04:39 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics reporters closed
+2021-12-20 00:04:39 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Closing kafka producer!
+2021-12-20 00:04:39 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-12-20 00:04:39 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.boot.autoconfigure.kafka.KafkaAnnotationDrivenConfiguration': Unexpected exception during bean creation; nested exception is java.lang.TypeNotPresentException: Type org.springframework.kafka.listener.CommonErrorHandler not present
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:64)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:412)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1290)
+	at com.microservices.demo.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:32)
+Caused by: java.lang.TypeNotPresentException: Type org.springframework.kafka.listener.CommonErrorHandler not present
+	at sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:117)
+	at sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:125)
+	at sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49)
+	at sun.reflect.generics.visitor.Reifier.reifyTypeArguments(Reifier.java:68)
+	at sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:138)
+	at sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49)
+	at sun.reflect.generics.repository.ConstructorRepository.getParameterTypes(ConstructorRepository.java:94)
+	at java.lang.reflect.Executable.getGenericParameterTypes(Executable.java:283)
+	at java.lang.reflect.Constructor.getGenericParameterTypes(Constructor.java:234)
+	at org.springframework.core.MethodParameter.getGenericParameterType(MethodParameter.java:513)
+	at org.springframework.core.SerializableTypeWrapper$MethodParameterTypeProvider.getType(SerializableTypeWrapper.java:291)
+	at org.springframework.core.SerializableTypeWrapper.forTypeProvider(SerializableTypeWrapper.java:107)
+	at org.springframework.core.ResolvableType.forType(ResolvableType.java:1421)
+	at org.springframework.core.ResolvableType.forMethodParameter(ResolvableType.java:1342)
+	at org.springframework.core.ResolvableType.forMethodParameter(ResolvableType.java:1324)
+	at org.springframework.core.ResolvableType.forMethodParameter(ResolvableType.java:1291)
+	at org.springframework.beans.factory.config.DependencyDescriptor.getResolvableType(DependencyDescriptor.java:314)
+	at org.springframework.beans.factory.support.GenericTypeAwareAutowireCandidateResolver.checkGenericTypeMatch(GenericTypeAwareAutowireCandidateResolver.java:77)
+	at org.springframework.beans.factory.support.GenericTypeAwareAutowireCandidateResolver.isAutowireCandidate(GenericTypeAwareAutowireCandidateResolver.java:69)
+	at org.springframework.beans.factory.annotation.QualifierAnnotationAutowireCandidateResolver.isAutowireCandidate(QualifierAnnotationAutowireCandidateResolver.java:146)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.isAutowireCandidate(DefaultListableBeanFactory.java:853)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.isAutowireCandidate(DefaultListableBeanFactory.java:812)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.isAutowireCandidate(DefaultListableBeanFactory.java:795)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1561)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1343)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	... 14 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.springframework.kafka.listener.CommonErrorHandler
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:349)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:114)
+	... 46 common frames omitted
+2021-12-20 00:11:07 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication using Java 1.8.0_202 on DESKTOP-HD6CG2B with PID 10764 (C:\Workspaces\EventDrivenMicroservices\microservices-demo\twitter-to-kafka-service\target\classes started by DELL in C:\Workspaces\EventDrivenMicroservices\microservices-demo)
+2021-12-20 00:11:07 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - No active profile set, falling back to default profiles: default
+2021-12-20 00:11:09 [main] INFO  o.a.k.c.admin.AdminClientConfig - AdminClientConfig values: 
+	bootstrap.servers = [localhost:19092, localhost:29092, localhost:39092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2021-12-20 00:11:09 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.0.0
+2021-12-20 00:11:09 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 8cb0a5e9d3441962
+2021-12-20 00:11:09 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1639939269583
+2021-12-20 00:11:10 [main] WARN  o.s.b.w.r.c.AnnotationConfigReactiveWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.boot.autoconfigure.kafka.KafkaAnnotationDrivenConfiguration': Unexpected exception during bean creation; nested exception is java.lang.TypeNotPresentException: Type org.springframework.kafka.listener.CommonErrorHandler not present
+2021-12-20 00:11:10 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.utils.AppInfoParser - App info kafka.admin.client for adminclient-1 unregistered
+2021-12-20 00:11:10 [kafka-admin-client-thread | adminclient-1] INFO  o.a.k.c.a.i.AdminMetadataManager - [AdminClient clientId=adminclient-1] Metadata update failed
+org.apache.kafka.common.errors.TimeoutException: Timed out waiting to send the call. Call: fetchMetadata
+2021-12-20 00:11:10 [kafka-admin-client-thread | adminclient-1] INFO  o.a.k.clients.admin.KafkaAdminClient - [AdminClient clientId=adminclient-1] Timed out 1 remaining operation(s) during close.
+2021-12-20 00:11:10 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+2021-12-20 00:11:10 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2021-12-20 00:11:10 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics reporters closed
+2021-12-20 00:11:10 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Closing kafka producer!
+2021-12-20 00:11:10 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-12-20 00:11:10 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.boot.autoconfigure.kafka.KafkaAnnotationDrivenConfiguration': Unexpected exception during bean creation; nested exception is java.lang.TypeNotPresentException: Type org.springframework.kafka.listener.CommonErrorHandler not present
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:64)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:412)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1290)
+	at com.microservices.demo.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:32)
+Caused by: java.lang.TypeNotPresentException: Type org.springframework.kafka.listener.CommonErrorHandler not present
+	at sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:117)
+	at sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:125)
+	at sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49)
+	at sun.reflect.generics.visitor.Reifier.reifyTypeArguments(Reifier.java:68)
+	at sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:138)
+	at sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49)
+	at sun.reflect.generics.repository.ConstructorRepository.getParameterTypes(ConstructorRepository.java:94)
+	at java.lang.reflect.Executable.getGenericParameterTypes(Executable.java:283)
+	at java.lang.reflect.Constructor.getGenericParameterTypes(Constructor.java:234)
+	at org.springframework.core.MethodParameter.getGenericParameterType(MethodParameter.java:513)
+	at org.springframework.core.SerializableTypeWrapper$MethodParameterTypeProvider.getType(SerializableTypeWrapper.java:291)
+	at org.springframework.core.SerializableTypeWrapper.forTypeProvider(SerializableTypeWrapper.java:107)
+	at org.springframework.core.ResolvableType.forType(ResolvableType.java:1421)
+	at org.springframework.core.ResolvableType.forMethodParameter(ResolvableType.java:1342)
+	at org.springframework.core.ResolvableType.forMethodParameter(ResolvableType.java:1324)
+	at org.springframework.core.ResolvableType.forMethodParameter(ResolvableType.java:1291)
+	at org.springframework.beans.factory.config.DependencyDescriptor.getResolvableType(DependencyDescriptor.java:314)
+	at org.springframework.beans.factory.support.GenericTypeAwareAutowireCandidateResolver.checkGenericTypeMatch(GenericTypeAwareAutowireCandidateResolver.java:77)
+	at org.springframework.beans.factory.support.GenericTypeAwareAutowireCandidateResolver.isAutowireCandidate(GenericTypeAwareAutowireCandidateResolver.java:69)
+	at org.springframework.beans.factory.annotation.QualifierAnnotationAutowireCandidateResolver.isAutowireCandidate(QualifierAnnotationAutowireCandidateResolver.java:146)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.isAutowireCandidate(DefaultListableBeanFactory.java:853)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.isAutowireCandidate(DefaultListableBeanFactory.java:812)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.isAutowireCandidate(DefaultListableBeanFactory.java:795)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1561)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1343)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	... 14 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.springframework.kafka.listener.CommonErrorHandler
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:349)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:114)
+	... 46 common frames omitted
+2021-12-20 00:19:42 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication using Java 1.8.0_202 on DESKTOP-HD6CG2B with PID 3344 (C:\Workspaces\EventDrivenMicroservices\microservices-demo\twitter-to-kafka-service\target\classes started by DELL in C:\Workspaces\EventDrivenMicroservices\microservices-demo)
+2021-12-20 00:19:42 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - No active profile set, falling back to default profiles: default
+2021-12-20 00:19:44 [main] INFO  o.a.k.c.admin.AdminClientConfig - AdminClientConfig values: 
+	bootstrap.servers = [localhost:19092, localhost:29092, localhost:39092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2021-12-20 00:19:44 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.0.0
+2021-12-20 00:19:44 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 8cb0a5e9d3441962
+2021-12-20 00:19:44 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1639939784704
+2021-12-20 00:19:45 [main] WARN  o.s.b.w.r.c.AnnotationConfigReactiveWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.boot.autoconfigure.kafka.KafkaAnnotationDrivenConfiguration': Unexpected exception during bean creation; nested exception is java.lang.TypeNotPresentException: Type org.springframework.kafka.listener.CommonErrorHandler not present
+2021-12-20 00:19:45 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.utils.AppInfoParser - App info kafka.admin.client for adminclient-1 unregistered
+2021-12-20 00:19:45 [kafka-admin-client-thread | adminclient-1] INFO  o.a.k.c.a.i.AdminMetadataManager - [AdminClient clientId=adminclient-1] Metadata update failed
+org.apache.kafka.common.errors.TimeoutException: Timed out waiting to send the call. Call: fetchMetadata
+2021-12-20 00:19:45 [kafka-admin-client-thread | adminclient-1] INFO  o.a.k.clients.admin.KafkaAdminClient - [AdminClient clientId=adminclient-1] Timed out 1 remaining operation(s) during close.
+2021-12-20 00:19:45 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+2021-12-20 00:19:45 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2021-12-20 00:19:45 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics reporters closed
+2021-12-20 00:19:45 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Closing kafka producer!
+2021-12-20 00:19:45 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-12-20 00:19:45 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.boot.autoconfigure.kafka.KafkaAnnotationDrivenConfiguration': Unexpected exception during bean creation; nested exception is java.lang.TypeNotPresentException: Type org.springframework.kafka.listener.CommonErrorHandler not present
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:64)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:412)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1290)
+	at com.microservices.demo.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:32)
+Caused by: java.lang.TypeNotPresentException: Type org.springframework.kafka.listener.CommonErrorHandler not present
+	at sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:117)
+	at sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:125)
+	at sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49)
+	at sun.reflect.generics.visitor.Reifier.reifyTypeArguments(Reifier.java:68)
+	at sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:138)
+	at sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49)
+	at sun.reflect.generics.repository.ConstructorRepository.getParameterTypes(ConstructorRepository.java:94)
+	at java.lang.reflect.Executable.getGenericParameterTypes(Executable.java:283)
+	at java.lang.reflect.Constructor.getGenericParameterTypes(Constructor.java:234)
+	at org.springframework.core.MethodParameter.getGenericParameterType(MethodParameter.java:513)
+	at org.springframework.core.SerializableTypeWrapper$MethodParameterTypeProvider.getType(SerializableTypeWrapper.java:291)
+	at org.springframework.core.SerializableTypeWrapper.forTypeProvider(SerializableTypeWrapper.java:107)
+	at org.springframework.core.ResolvableType.forType(ResolvableType.java:1421)
+	at org.springframework.core.ResolvableType.forMethodParameter(ResolvableType.java:1342)
+	at org.springframework.core.ResolvableType.forMethodParameter(ResolvableType.java:1324)
+	at org.springframework.core.ResolvableType.forMethodParameter(ResolvableType.java:1291)
+	at org.springframework.beans.factory.config.DependencyDescriptor.getResolvableType(DependencyDescriptor.java:314)
+	at org.springframework.beans.factory.support.GenericTypeAwareAutowireCandidateResolver.checkGenericTypeMatch(GenericTypeAwareAutowireCandidateResolver.java:77)
+	at org.springframework.beans.factory.support.GenericTypeAwareAutowireCandidateResolver.isAutowireCandidate(GenericTypeAwareAutowireCandidateResolver.java:69)
+	at org.springframework.beans.factory.annotation.QualifierAnnotationAutowireCandidateResolver.isAutowireCandidate(QualifierAnnotationAutowireCandidateResolver.java:146)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.isAutowireCandidate(DefaultListableBeanFactory.java:853)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.isAutowireCandidate(DefaultListableBeanFactory.java:812)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.isAutowireCandidate(DefaultListableBeanFactory.java:795)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1561)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1343)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	... 14 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.springframework.kafka.listener.CommonErrorHandler
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:349)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:114)
+	... 46 common frames omitted
+2021-12-20 00:23:14 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication using Java 1.8.0_202 on DESKTOP-HD6CG2B with PID 24480 (C:\Workspaces\EventDrivenMicroservices\microservices-demo\twitter-to-kafka-service\target\classes started by DELL in C:\Workspaces\EventDrivenMicroservices\microservices-demo)
+2021-12-20 00:23:14 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - No active profile set, falling back to default profiles: default
+2021-12-20 00:23:16 [main] INFO  o.a.k.c.admin.AdminClientConfig - AdminClientConfig values: 
+	bootstrap.servers = [localhost:19092, localhost:29092, localhost:39092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2021-12-20 00:23:17 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.0.0
+2021-12-20 00:23:17 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 8cb0a5e9d3441962
+2021-12-20 00:23:17 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1639939997070
+2021-12-20 00:23:17 [main] WARN  o.s.b.w.r.c.AnnotationConfigReactiveWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.boot.autoconfigure.kafka.KafkaAnnotationDrivenConfiguration': Unexpected exception during bean creation; nested exception is java.lang.TypeNotPresentException: Type org.springframework.kafka.listener.CommonErrorHandler not present
+2021-12-20 00:23:17 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.utils.AppInfoParser - App info kafka.admin.client for adminclient-1 unregistered
+2021-12-20 00:23:17 [kafka-admin-client-thread | adminclient-1] INFO  o.a.k.c.a.i.AdminMetadataManager - [AdminClient clientId=adminclient-1] Metadata update failed
+org.apache.kafka.common.errors.TimeoutException: Timed out waiting to send the call. Call: fetchMetadata
+2021-12-20 00:23:17 [kafka-admin-client-thread | adminclient-1] INFO  o.a.k.clients.admin.KafkaAdminClient - [AdminClient clientId=adminclient-1] Timed out 1 remaining operation(s) during close.
+2021-12-20 00:23:17 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+2021-12-20 00:23:17 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2021-12-20 00:23:17 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics reporters closed
+2021-12-20 00:23:17 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Closing kafka producer!
+2021-12-20 00:23:17 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-12-20 00:23:17 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.boot.autoconfigure.kafka.KafkaAnnotationDrivenConfiguration': Unexpected exception during bean creation; nested exception is java.lang.TypeNotPresentException: Type org.springframework.kafka.listener.CommonErrorHandler not present
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:64)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:412)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1290)
+	at com.microservices.demo.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:32)
+Caused by: java.lang.TypeNotPresentException: Type org.springframework.kafka.listener.CommonErrorHandler not present
+	at sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:117)
+	at sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:125)
+	at sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49)
+	at sun.reflect.generics.visitor.Reifier.reifyTypeArguments(Reifier.java:68)
+	at sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:138)
+	at sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49)
+	at sun.reflect.generics.repository.ConstructorRepository.getParameterTypes(ConstructorRepository.java:94)
+	at java.lang.reflect.Executable.getGenericParameterTypes(Executable.java:283)
+	at java.lang.reflect.Constructor.getGenericParameterTypes(Constructor.java:234)
+	at org.springframework.core.MethodParameter.getGenericParameterType(MethodParameter.java:513)
+	at org.springframework.core.SerializableTypeWrapper$MethodParameterTypeProvider.getType(SerializableTypeWrapper.java:291)
+	at org.springframework.core.SerializableTypeWrapper.forTypeProvider(SerializableTypeWrapper.java:107)
+	at org.springframework.core.ResolvableType.forType(ResolvableType.java:1421)
+	at org.springframework.core.ResolvableType.forMethodParameter(ResolvableType.java:1342)
+	at org.springframework.core.ResolvableType.forMethodParameter(ResolvableType.java:1324)
+	at org.springframework.core.ResolvableType.forMethodParameter(ResolvableType.java:1291)
+	at org.springframework.beans.factory.config.DependencyDescriptor.getResolvableType(DependencyDescriptor.java:314)
+	at org.springframework.beans.factory.support.GenericTypeAwareAutowireCandidateResolver.checkGenericTypeMatch(GenericTypeAwareAutowireCandidateResolver.java:77)
+	at org.springframework.beans.factory.support.GenericTypeAwareAutowireCandidateResolver.isAutowireCandidate(GenericTypeAwareAutowireCandidateResolver.java:69)
+	at org.springframework.beans.factory.annotation.QualifierAnnotationAutowireCandidateResolver.isAutowireCandidate(QualifierAnnotationAutowireCandidateResolver.java:146)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.isAutowireCandidate(DefaultListableBeanFactory.java:853)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.isAutowireCandidate(DefaultListableBeanFactory.java:812)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.isAutowireCandidate(DefaultListableBeanFactory.java:795)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1561)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1343)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	... 14 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.springframework.kafka.listener.CommonErrorHandler
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:349)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:114)
+	... 46 common frames omitted
+2021-12-20 00:25:33 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication using Java 1.8.0_202 on DESKTOP-HD6CG2B with PID 28284 (C:\Workspaces\EventDrivenMicroservices\microservices-demo\twitter-to-kafka-service\target\classes started by DELL in C:\Workspaces\EventDrivenMicroservices\microservices-demo)
+2021-12-20 00:25:33 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - No active profile set, falling back to default profiles: default
+2021-12-20 00:25:35 [main] INFO  o.a.k.c.admin.AdminClientConfig - AdminClientConfig values: 
+	bootstrap.servers = [localhost:19092, localhost:29092, localhost:39092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2021-12-20 00:25:36 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.0.0
+2021-12-20 00:25:36 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 8cb0a5e9d3441962
+2021-12-20 00:25:36 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1639940136259
+2021-12-20 00:25:37 [main] WARN  o.s.b.w.r.c.AnnotationConfigReactiveWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.boot.autoconfigure.kafka.KafkaAnnotationDrivenConfiguration': Unexpected exception during bean creation; nested exception is java.lang.TypeNotPresentException: Type org.springframework.kafka.listener.CommonErrorHandler not present
+2021-12-20 00:25:37 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.utils.AppInfoParser - App info kafka.admin.client for adminclient-1 unregistered
+2021-12-20 00:25:37 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+2021-12-20 00:25:37 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2021-12-20 00:25:37 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics reporters closed
+2021-12-20 00:25:37 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Closing kafka producer!
+2021-12-20 00:25:37 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-12-20 00:25:37 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.boot.autoconfigure.kafka.KafkaAnnotationDrivenConfiguration': Unexpected exception during bean creation; nested exception is java.lang.TypeNotPresentException: Type org.springframework.kafka.listener.CommonErrorHandler not present
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:64)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:412)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1290)
+	at com.microservices.demo.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:32)
+Caused by: java.lang.TypeNotPresentException: Type org.springframework.kafka.listener.CommonErrorHandler not present
+	at sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:117)
+	at sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:125)
+	at sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49)
+	at sun.reflect.generics.visitor.Reifier.reifyTypeArguments(Reifier.java:68)
+	at sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:138)
+	at sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49)
+	at sun.reflect.generics.repository.ConstructorRepository.getParameterTypes(ConstructorRepository.java:94)
+	at java.lang.reflect.Executable.getGenericParameterTypes(Executable.java:283)
+	at java.lang.reflect.Constructor.getGenericParameterTypes(Constructor.java:234)
+	at org.springframework.core.MethodParameter.getGenericParameterType(MethodParameter.java:513)
+	at org.springframework.core.SerializableTypeWrapper$MethodParameterTypeProvider.getType(SerializableTypeWrapper.java:291)
+	at org.springframework.core.SerializableTypeWrapper.forTypeProvider(SerializableTypeWrapper.java:107)
+	at org.springframework.core.ResolvableType.forType(ResolvableType.java:1421)
+	at org.springframework.core.ResolvableType.forMethodParameter(ResolvableType.java:1342)
+	at org.springframework.core.ResolvableType.forMethodParameter(ResolvableType.java:1324)
+	at org.springframework.core.ResolvableType.forMethodParameter(ResolvableType.java:1291)
+	at org.springframework.beans.factory.config.DependencyDescriptor.getResolvableType(DependencyDescriptor.java:314)
+	at org.springframework.beans.factory.support.GenericTypeAwareAutowireCandidateResolver.checkGenericTypeMatch(GenericTypeAwareAutowireCandidateResolver.java:77)
+	at org.springframework.beans.factory.support.GenericTypeAwareAutowireCandidateResolver.isAutowireCandidate(GenericTypeAwareAutowireCandidateResolver.java:69)
+	at org.springframework.beans.factory.annotation.QualifierAnnotationAutowireCandidateResolver.isAutowireCandidate(QualifierAnnotationAutowireCandidateResolver.java:146)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.isAutowireCandidate(DefaultListableBeanFactory.java:853)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.isAutowireCandidate(DefaultListableBeanFactory.java:812)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.isAutowireCandidate(DefaultListableBeanFactory.java:795)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1561)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1343)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	... 14 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.springframework.kafka.listener.CommonErrorHandler
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:349)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:114)
+	... 46 common frames omitted
+2021-12-20 00:30:47 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication using Java 1.8.0_202 on DESKTOP-HD6CG2B with PID 8892 (C:\Workspaces\EventDrivenMicroservices\microservices-demo\twitter-to-kafka-service\target\classes started by DELL in C:\Workspaces\EventDrivenMicroservices\microservices-demo)
+2021-12-20 00:30:47 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - No active profile set, falling back to default profiles: default
+2021-12-20 00:30:49 [main] INFO  o.a.k.c.admin.AdminClientConfig - AdminClientConfig values: 
+	bootstrap.servers = [localhost:19092, localhost:29092, localhost:39092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2021-12-20 00:30:50 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.0.0
+2021-12-20 00:30:50 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 8cb0a5e9d3441962
+2021-12-20 00:30:50 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1639940450234
+2021-12-20 00:30:51 [main] WARN  o.s.b.w.r.c.AnnotationConfigReactiveWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.boot.autoconfigure.kafka.KafkaAnnotationDrivenConfiguration': Unexpected exception during bean creation; nested exception is java.lang.TypeNotPresentException: Type org.springframework.kafka.listener.CommonErrorHandler not present
+2021-12-20 00:30:51 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.utils.AppInfoParser - App info kafka.admin.client for adminclient-1 unregistered
+2021-12-20 00:30:51 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+2021-12-20 00:30:51 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2021-12-20 00:30:51 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics reporters closed
+2021-12-20 00:30:51 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Closing kafka producer!
+2021-12-20 00:30:51 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-12-20 00:30:51 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.boot.autoconfigure.kafka.KafkaAnnotationDrivenConfiguration': Unexpected exception during bean creation; nested exception is java.lang.TypeNotPresentException: Type org.springframework.kafka.listener.CommonErrorHandler not present
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:64)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:412)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1290)
+	at com.microservices.demo.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:32)
+Caused by: java.lang.TypeNotPresentException: Type org.springframework.kafka.listener.CommonErrorHandler not present
+	at sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:117)
+	at sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:125)
+	at sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49)
+	at sun.reflect.generics.visitor.Reifier.reifyTypeArguments(Reifier.java:68)
+	at sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:138)
+	at sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49)
+	at sun.reflect.generics.repository.ConstructorRepository.getParameterTypes(ConstructorRepository.java:94)
+	at java.lang.reflect.Executable.getGenericParameterTypes(Executable.java:283)
+	at java.lang.reflect.Constructor.getGenericParameterTypes(Constructor.java:234)
+	at org.springframework.core.MethodParameter.getGenericParameterType(MethodParameter.java:513)
+	at org.springframework.core.SerializableTypeWrapper$MethodParameterTypeProvider.getType(SerializableTypeWrapper.java:291)
+	at org.springframework.core.SerializableTypeWrapper.forTypeProvider(SerializableTypeWrapper.java:107)
+	at org.springframework.core.ResolvableType.forType(ResolvableType.java:1421)
+	at org.springframework.core.ResolvableType.forMethodParameter(ResolvableType.java:1342)
+	at org.springframework.core.ResolvableType.forMethodParameter(ResolvableType.java:1324)
+	at org.springframework.core.ResolvableType.forMethodParameter(ResolvableType.java:1291)
+	at org.springframework.beans.factory.config.DependencyDescriptor.getResolvableType(DependencyDescriptor.java:314)
+	at org.springframework.beans.factory.support.GenericTypeAwareAutowireCandidateResolver.checkGenericTypeMatch(GenericTypeAwareAutowireCandidateResolver.java:77)
+	at org.springframework.beans.factory.support.GenericTypeAwareAutowireCandidateResolver.isAutowireCandidate(GenericTypeAwareAutowireCandidateResolver.java:69)
+	at org.springframework.beans.factory.annotation.QualifierAnnotationAutowireCandidateResolver.isAutowireCandidate(QualifierAnnotationAutowireCandidateResolver.java:146)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.isAutowireCandidate(DefaultListableBeanFactory.java:853)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.isAutowireCandidate(DefaultListableBeanFactory.java:812)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.isAutowireCandidate(DefaultListableBeanFactory.java:795)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1561)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1343)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	... 14 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.springframework.kafka.listener.CommonErrorHandler
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:349)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:114)
+	... 46 common frames omitted
+2021-12-20 00:36:58 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication using Java 1.8.0_202 on DESKTOP-HD6CG2B with PID 21412 (C:\Workspaces\EventDrivenMicroservices\microservices-demo\twitter-to-kafka-service\target\classes started by DELL in C:\Workspaces\EventDrivenMicroservices\microservices-demo)
+2021-12-20 00:36:58 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - No active profile set, falling back to default profiles: default
+2021-12-20 00:37:01 [main] INFO  o.a.k.c.admin.AdminClientConfig - AdminClientConfig values: 
+	bootstrap.servers = [localhost:19092, localhost:29092, localhost:39092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2021-12-20 00:37:01 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.0.0
+2021-12-20 00:37:01 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 8cb0a5e9d3441962
+2021-12-20 00:37:01 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1639940821776
+2021-12-20 00:37:02 [main] WARN  o.s.b.w.r.c.AnnotationConfigReactiveWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.boot.autoconfigure.kafka.KafkaAnnotationDrivenConfiguration': Unexpected exception during bean creation; nested exception is java.lang.TypeNotPresentException: Type org.springframework.kafka.listener.CommonErrorHandler not present
+2021-12-20 00:37:02 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.utils.AppInfoParser - App info kafka.admin.client for adminclient-1 unregistered
+2021-12-20 00:37:02 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+2021-12-20 00:37:02 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2021-12-20 00:37:02 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics reporters closed
+2021-12-20 00:37:02 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Closing kafka producer!
+2021-12-20 00:37:02 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-12-20 00:37:02 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.boot.autoconfigure.kafka.KafkaAnnotationDrivenConfiguration': Unexpected exception during bean creation; nested exception is java.lang.TypeNotPresentException: Type org.springframework.kafka.listener.CommonErrorHandler not present
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:64)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:412)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1290)
+	at com.microservices.demo.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:32)
+Caused by: java.lang.TypeNotPresentException: Type org.springframework.kafka.listener.CommonErrorHandler not present
+	at sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:117)
+	at sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:125)
+	at sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49)
+	at sun.reflect.generics.visitor.Reifier.reifyTypeArguments(Reifier.java:68)
+	at sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:138)
+	at sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49)
+	at sun.reflect.generics.repository.ConstructorRepository.getParameterTypes(ConstructorRepository.java:94)
+	at java.lang.reflect.Executable.getGenericParameterTypes(Executable.java:283)
+	at java.lang.reflect.Constructor.getGenericParameterTypes(Constructor.java:234)
+	at org.springframework.core.MethodParameter.getGenericParameterType(MethodParameter.java:513)
+	at org.springframework.core.SerializableTypeWrapper$MethodParameterTypeProvider.getType(SerializableTypeWrapper.java:291)
+	at org.springframework.core.SerializableTypeWrapper.forTypeProvider(SerializableTypeWrapper.java:107)
+	at org.springframework.core.ResolvableType.forType(ResolvableType.java:1421)
+	at org.springframework.core.ResolvableType.forMethodParameter(ResolvableType.java:1342)
+	at org.springframework.core.ResolvableType.forMethodParameter(ResolvableType.java:1324)
+	at org.springframework.core.ResolvableType.forMethodParameter(ResolvableType.java:1291)
+	at org.springframework.beans.factory.config.DependencyDescriptor.getResolvableType(DependencyDescriptor.java:314)
+	at org.springframework.beans.factory.support.GenericTypeAwareAutowireCandidateResolver.checkGenericTypeMatch(GenericTypeAwareAutowireCandidateResolver.java:77)
+	at org.springframework.beans.factory.support.GenericTypeAwareAutowireCandidateResolver.isAutowireCandidate(GenericTypeAwareAutowireCandidateResolver.java:69)
+	at org.springframework.beans.factory.annotation.QualifierAnnotationAutowireCandidateResolver.isAutowireCandidate(QualifierAnnotationAutowireCandidateResolver.java:146)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.isAutowireCandidate(DefaultListableBeanFactory.java:853)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.isAutowireCandidate(DefaultListableBeanFactory.java:812)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.isAutowireCandidate(DefaultListableBeanFactory.java:795)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1561)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1343)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	... 14 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.springframework.kafka.listener.CommonErrorHandler
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:349)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:114)
+	... 46 common frames omitted
+2021-12-20 00:40:53 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication using Java 1.8.0_202 on DESKTOP-HD6CG2B with PID 6408 (C:\Workspaces\EventDrivenMicroservices\microservices-demo\twitter-to-kafka-service\target\classes started by DELL in C:\Workspaces\EventDrivenMicroservices\microservices-demo)
+2021-12-20 00:40:53 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - No active profile set, falling back to default profiles: default
+2021-12-20 00:40:55 [main] INFO  o.a.k.c.admin.AdminClientConfig - AdminClientConfig values: 
+	bootstrap.servers = [localhost:19092, localhost:29092, localhost:39092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2021-12-20 00:40:55 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.0.0
+2021-12-20 00:40:55 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 8cb0a5e9d3441962
+2021-12-20 00:40:55 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1639941055550
+2021-12-20 00:40:56 [main] WARN  o.s.b.w.r.c.AnnotationConfigReactiveWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.boot.autoconfigure.kafka.KafkaAnnotationDrivenConfiguration': Unexpected exception during bean creation; nested exception is java.lang.TypeNotPresentException: Type org.springframework.kafka.listener.CommonErrorHandler not present
+2021-12-20 00:40:56 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.utils.AppInfoParser - App info kafka.admin.client for adminclient-1 unregistered
+2021-12-20 00:40:56 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+2021-12-20 00:40:56 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2021-12-20 00:40:56 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics reporters closed
+2021-12-20 00:40:56 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Closing kafka producer!
+2021-12-20 00:40:56 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-12-20 00:40:56 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.boot.autoconfigure.kafka.KafkaAnnotationDrivenConfiguration': Unexpected exception during bean creation; nested exception is java.lang.TypeNotPresentException: Type org.springframework.kafka.listener.CommonErrorHandler not present
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:64)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:412)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1290)
+	at com.microservices.demo.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:32)
+Caused by: java.lang.TypeNotPresentException: Type org.springframework.kafka.listener.CommonErrorHandler not present
+	at sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:117)
+	at sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:125)
+	at sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49)
+	at sun.reflect.generics.visitor.Reifier.reifyTypeArguments(Reifier.java:68)
+	at sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:138)
+	at sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49)
+	at sun.reflect.generics.repository.ConstructorRepository.getParameterTypes(ConstructorRepository.java:94)
+	at java.lang.reflect.Executable.getGenericParameterTypes(Executable.java:283)
+	at java.lang.reflect.Constructor.getGenericParameterTypes(Constructor.java:234)
+	at org.springframework.core.MethodParameter.getGenericParameterType(MethodParameter.java:513)
+	at org.springframework.core.SerializableTypeWrapper$MethodParameterTypeProvider.getType(SerializableTypeWrapper.java:291)
+	at org.springframework.core.SerializableTypeWrapper.forTypeProvider(SerializableTypeWrapper.java:107)
+	at org.springframework.core.ResolvableType.forType(ResolvableType.java:1421)
+	at org.springframework.core.ResolvableType.forMethodParameter(ResolvableType.java:1342)
+	at org.springframework.core.ResolvableType.forMethodParameter(ResolvableType.java:1324)
+	at org.springframework.core.ResolvableType.forMethodParameter(ResolvableType.java:1291)
+	at org.springframework.beans.factory.config.DependencyDescriptor.getResolvableType(DependencyDescriptor.java:314)
+	at org.springframework.beans.factory.support.GenericTypeAwareAutowireCandidateResolver.checkGenericTypeMatch(GenericTypeAwareAutowireCandidateResolver.java:77)
+	at org.springframework.beans.factory.support.GenericTypeAwareAutowireCandidateResolver.isAutowireCandidate(GenericTypeAwareAutowireCandidateResolver.java:69)
+	at org.springframework.beans.factory.annotation.QualifierAnnotationAutowireCandidateResolver.isAutowireCandidate(QualifierAnnotationAutowireCandidateResolver.java:146)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.isAutowireCandidate(DefaultListableBeanFactory.java:853)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.isAutowireCandidate(DefaultListableBeanFactory.java:812)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.isAutowireCandidate(DefaultListableBeanFactory.java:795)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1561)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1343)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	... 14 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.springframework.kafka.listener.CommonErrorHandler
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:349)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:114)
+	... 46 common frames omitted
+2021-12-20 00:45:26 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication using Java 1.8.0_202 on DESKTOP-HD6CG2B with PID 9872 (C:\Workspaces\EventDrivenMicroservices\microservices-demo\twitter-to-kafka-service\target\classes started by DELL in C:\Workspaces\EventDrivenMicroservices\microservices-demo)
+2021-12-20 00:45:26 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - No active profile set, falling back to default profiles: default
+2021-12-20 00:45:28 [main] INFO  o.a.k.c.admin.AdminClientConfig - AdminClientConfig values: 
+	bootstrap.servers = [localhost:19092, localhost:29092, localhost:39092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2021-12-20 00:45:28 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.0.0
+2021-12-20 00:45:28 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 8cb0a5e9d3441962
+2021-12-20 00:45:28 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1639941328756
+2021-12-20 00:45:29 [main] WARN  o.s.b.w.r.c.AnnotationConfigReactiveWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.boot.autoconfigure.kafka.KafkaAnnotationDrivenConfiguration': Unexpected exception during bean creation; nested exception is java.lang.TypeNotPresentException: Type org.springframework.kafka.listener.CommonErrorHandler not present
+2021-12-20 00:45:29 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.utils.AppInfoParser - App info kafka.admin.client for adminclient-1 unregistered
+2021-12-20 00:45:29 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+2021-12-20 00:45:29 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2021-12-20 00:45:29 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics reporters closed
+2021-12-20 00:45:29 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Closing kafka producer!
+2021-12-20 00:45:29 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-12-20 00:45:29 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.boot.autoconfigure.kafka.KafkaAnnotationDrivenConfiguration': Unexpected exception during bean creation; nested exception is java.lang.TypeNotPresentException: Type org.springframework.kafka.listener.CommonErrorHandler not present
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:64)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:412)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1290)
+	at com.microservices.demo.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:32)
+Caused by: java.lang.TypeNotPresentException: Type org.springframework.kafka.listener.CommonErrorHandler not present
+	at sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:117)
+	at sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:125)
+	at sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49)
+	at sun.reflect.generics.visitor.Reifier.reifyTypeArguments(Reifier.java:68)
+	at sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:138)
+	at sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49)
+	at sun.reflect.generics.repository.ConstructorRepository.getParameterTypes(ConstructorRepository.java:94)
+	at java.lang.reflect.Executable.getGenericParameterTypes(Executable.java:283)
+	at java.lang.reflect.Constructor.getGenericParameterTypes(Constructor.java:234)
+	at org.springframework.core.MethodParameter.getGenericParameterType(MethodParameter.java:513)
+	at org.springframework.core.SerializableTypeWrapper$MethodParameterTypeProvider.getType(SerializableTypeWrapper.java:291)
+	at org.springframework.core.SerializableTypeWrapper.forTypeProvider(SerializableTypeWrapper.java:107)
+	at org.springframework.core.ResolvableType.forType(ResolvableType.java:1421)
+	at org.springframework.core.ResolvableType.forMethodParameter(ResolvableType.java:1342)
+	at org.springframework.core.ResolvableType.forMethodParameter(ResolvableType.java:1324)
+	at org.springframework.core.ResolvableType.forMethodParameter(ResolvableType.java:1291)
+	at org.springframework.beans.factory.config.DependencyDescriptor.getResolvableType(DependencyDescriptor.java:314)
+	at org.springframework.beans.factory.support.GenericTypeAwareAutowireCandidateResolver.checkGenericTypeMatch(GenericTypeAwareAutowireCandidateResolver.java:77)
+	at org.springframework.beans.factory.support.GenericTypeAwareAutowireCandidateResolver.isAutowireCandidate(GenericTypeAwareAutowireCandidateResolver.java:69)
+	at org.springframework.beans.factory.annotation.QualifierAnnotationAutowireCandidateResolver.isAutowireCandidate(QualifierAnnotationAutowireCandidateResolver.java:146)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.isAutowireCandidate(DefaultListableBeanFactory.java:853)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.isAutowireCandidate(DefaultListableBeanFactory.java:812)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.isAutowireCandidate(DefaultListableBeanFactory.java:795)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1561)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1343)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	... 14 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.springframework.kafka.listener.CommonErrorHandler
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:349)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:114)
+	... 46 common frames omitted
+2021-12-20 00:54:20 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication using Java 1.8.0_202 on DESKTOP-HD6CG2B with PID 14324 (C:\Workspaces\EventDrivenMicroservices\microservices-demo\twitter-to-kafka-service\target\classes started by DELL in C:\Workspaces\EventDrivenMicroservices\microservices-demo)
+2021-12-20 00:54:20 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - No active profile set, falling back to default profiles: default
+2021-12-20 00:54:22 [main] INFO  o.a.k.c.admin.AdminClientConfig - AdminClientConfig values: 
+	bootstrap.servers = [localhost:19092, localhost:29092, localhost:39092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2021-12-20 00:54:23 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.0.0
+2021-12-20 00:54:23 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 8cb0a5e9d3441962
+2021-12-20 00:54:23 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1639941863292
+2021-12-20 00:54:24 [main] WARN  o.s.b.w.r.c.AnnotationConfigReactiveWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.boot.autoconfigure.kafka.KafkaAnnotationDrivenConfiguration': Unexpected exception during bean creation; nested exception is java.lang.TypeNotPresentException: Type org.springframework.kafka.listener.CommonErrorHandler not present
+2021-12-20 00:54:24 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.utils.AppInfoParser - App info kafka.admin.client for adminclient-1 unregistered
+2021-12-20 00:54:24 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+2021-12-20 00:54:24 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2021-12-20 00:54:24 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics reporters closed
+2021-12-20 00:54:24 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Closing kafka producer!
+2021-12-20 00:54:24 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-12-20 00:54:24 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.boot.autoconfigure.kafka.KafkaAnnotationDrivenConfiguration': Unexpected exception during bean creation; nested exception is java.lang.TypeNotPresentException: Type org.springframework.kafka.listener.CommonErrorHandler not present
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:64)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:412)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1290)
+	at com.microservices.demo.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:32)
+Caused by: java.lang.TypeNotPresentException: Type org.springframework.kafka.listener.CommonErrorHandler not present
+	at sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:117)
+	at sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:125)
+	at sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49)
+	at sun.reflect.generics.visitor.Reifier.reifyTypeArguments(Reifier.java:68)
+	at sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:138)
+	at sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49)
+	at sun.reflect.generics.repository.ConstructorRepository.getParameterTypes(ConstructorRepository.java:94)
+	at java.lang.reflect.Executable.getGenericParameterTypes(Executable.java:283)
+	at java.lang.reflect.Constructor.getGenericParameterTypes(Constructor.java:234)
+	at org.springframework.core.MethodParameter.getGenericParameterType(MethodParameter.java:513)
+	at org.springframework.core.SerializableTypeWrapper$MethodParameterTypeProvider.getType(SerializableTypeWrapper.java:291)
+	at org.springframework.core.SerializableTypeWrapper.forTypeProvider(SerializableTypeWrapper.java:107)
+	at org.springframework.core.ResolvableType.forType(ResolvableType.java:1421)
+	at org.springframework.core.ResolvableType.forMethodParameter(ResolvableType.java:1342)
+	at org.springframework.core.ResolvableType.forMethodParameter(ResolvableType.java:1324)
+	at org.springframework.core.ResolvableType.forMethodParameter(ResolvableType.java:1291)
+	at org.springframework.beans.factory.config.DependencyDescriptor.getResolvableType(DependencyDescriptor.java:314)
+	at org.springframework.beans.factory.support.GenericTypeAwareAutowireCandidateResolver.checkGenericTypeMatch(GenericTypeAwareAutowireCandidateResolver.java:77)
+	at org.springframework.beans.factory.support.GenericTypeAwareAutowireCandidateResolver.isAutowireCandidate(GenericTypeAwareAutowireCandidateResolver.java:69)
+	at org.springframework.beans.factory.annotation.QualifierAnnotationAutowireCandidateResolver.isAutowireCandidate(QualifierAnnotationAutowireCandidateResolver.java:146)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.isAutowireCandidate(DefaultListableBeanFactory.java:853)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.isAutowireCandidate(DefaultListableBeanFactory.java:812)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.isAutowireCandidate(DefaultListableBeanFactory.java:795)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1561)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1343)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	... 14 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.springframework.kafka.listener.CommonErrorHandler
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:349)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:114)
+	... 46 common frames omitted
+2021-12-20 01:09:38 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication on DESKTOP-HD6CG2B with PID 13784 (C:\Workspaces\EventDrivenMicroservices\microservices-demo\twitter-to-kafka-service\target\classes started by DELL in C:\Workspaces\EventDrivenMicroservices\microservices-demo)
+2021-12-20 01:09:38 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - No active profile set, falling back to default profiles: default
+2021-12-20 01:09:40 [main] INFO  o.a.k.c.admin.AdminClientConfig - AdminClientConfig values: 
+	bootstrap.servers = [localhost:19092, localhost:29092, localhost:39092]
+	client.dns.lookup = default
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2021-12-20 01:09:40 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 2.5.1
+2021-12-20 01:09:40 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 0efa8fb0f4c73d92
+2021-12-20 01:09:40 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1639942780930
+2021-12-20 01:09:42 [main] INFO  o.s.b.w.e.netty.NettyWebServer - Netty started on port(s): 8080
+2021-12-20 01:09:42 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Started TwitterToKafkaServiceApplication in 3.934 seconds (JVM running for 4.915)
+2021-12-20 01:09:42 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - app started
+2021-12-20 01:09:42 [main] INFO  c.m.d.k.a.c.client.KafkaAdminClient - creating 1 kafka topics attempt 0 
+2021-12-20 01:09:42 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -2 (localhost/127.0.0.1:29092) could not be established. Broker may not be available.
+2021-12-20 01:09:43 [main] INFO  c.m.d.k.a.c.client.KafkaAdminClient - creating 1 kafka topics attempt 1 
+2021-12-20 01:09:45 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -3 (localhost/127.0.0.1:39092) could not be established. Broker may not be available.
+2021-12-20 01:09:45 [main] INFO  c.m.d.k.a.c.client.KafkaAdminClient - creating 1 kafka topics attempt 2 
+2021-12-20 01:09:45 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-12-20 01:09:45 [main] ERROR o.s.boot.SpringApplication - Application run failed
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:798)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:779)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:322)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at com.microservices.demo.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:32)
+Caused by: java.lang.RuntimeException: Reached max number of retry for creating kafka topics
+	at com.microservices.demo.kafka.admin.config.client.KafkaAdminClient.createTopics(KafkaAdminClient.java:47)
+	at com.microservices.demo.twitter.to.kafka.service.init.impl.KafkaStreamInitializer.init(KafkaStreamInitializer.java:23)
+	at com.microservices.demo.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:41)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:795)
+	... 5 common frames omitted
+2021-12-20 01:09:45 [kafka-admin-client-thread | adminclient-1] INFO  o.a.k.c.a.i.AdminMetadataManager - [AdminClient clientId=adminclient-1] Metadata update failed
+org.apache.kafka.common.errors.TimeoutException: Call(callName=fetchMetadata, deadlineMs=1639942810935) timed out at 9223372036854775807 after 1 attempt(s)
+Caused by: org.apache.kafka.common.errors.TimeoutException: Timed out waiting to send the call.
+2021-12-20 01:09:45 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Closing kafka producer!
+2021-12-20 01:10:55 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication on DESKTOP-HD6CG2B with PID 16912 (C:\Workspaces\EventDrivenMicroservices\microservices-demo\twitter-to-kafka-service\target\classes started by DELL in C:\Workspaces\EventDrivenMicroservices\microservices-demo)
+2021-12-20 01:10:55 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - No active profile set, falling back to default profiles: default
+2021-12-20 01:10:57 [main] INFO  o.a.k.c.admin.AdminClientConfig - AdminClientConfig values: 
+	bootstrap.servers = [localhost:19092, localhost:29092, localhost:39092]
+	client.dns.lookup = default
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2021-12-20 01:10:58 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 2.5.1
+2021-12-20 01:10:58 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 0efa8fb0f4c73d92
+2021-12-20 01:10:58 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1639942858066
+2021-12-20 01:10:59 [main] INFO  o.s.b.w.e.netty.NettyWebServer - Netty started on port(s): 8080
+2021-12-20 01:10:59 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Started TwitterToKafkaServiceApplication in 4.533 seconds (JVM running for 5.421)
+2021-12-20 01:10:59 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - app started
+2021-12-20 01:10:59 [main] INFO  c.m.d.k.a.c.client.KafkaAdminClient - creating 1 kafka topics attempt 0 
+2021-12-20 01:11:00 [main] INFO  c.m.d.k.a.c.client.KafkaAdminClient - creating 1 kafka topics attempt 1 
+2021-12-20 01:11:02 [main] INFO  c.m.d.k.a.c.client.KafkaAdminClient - creating 1 kafka topics attempt 2 
+2021-12-20 01:11:02 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-12-20 01:11:02 [main] ERROR o.s.boot.SpringApplication - Application run failed
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:798)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:779)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:322)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at com.microservices.demo.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:32)
+Caused by: java.lang.RuntimeException: Reached max number of retry for creating kafka topics
+	at com.microservices.demo.kafka.admin.config.client.KafkaAdminClient.createTopics(KafkaAdminClient.java:47)
+	at com.microservices.demo.twitter.to.kafka.service.init.impl.KafkaStreamInitializer.init(KafkaStreamInitializer.java:23)
+	at com.microservices.demo.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:41)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:795)
+	... 5 common frames omitted
+2021-12-20 01:11:02 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Closing kafka producer!
+2021-12-20 01:13:29 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication on DESKTOP-HD6CG2B with PID 19340 (C:\Workspaces\EventDrivenMicroservices\microservices-demo\twitter-to-kafka-service\target\classes started by DELL in C:\Workspaces\EventDrivenMicroservices\microservices-demo)
+2021-12-20 01:13:29 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - No active profile set, falling back to default profiles: default
+2021-12-20 01:13:31 [main] INFO  o.a.k.c.admin.AdminClientConfig - AdminClientConfig values: 
+	bootstrap.servers = [localhost:19092, localhost:29092, localhost:39092]
+	client.dns.lookup = default
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2021-12-20 01:13:31 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 2.5.1
+2021-12-20 01:13:31 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 0efa8fb0f4c73d92
+2021-12-20 01:13:31 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1639943011502
+2021-12-20 01:13:32 [main] INFO  o.s.b.w.e.netty.NettyWebServer - Netty started on port(s): 8080
+2021-12-20 01:13:32 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Started TwitterToKafkaServiceApplication in 4.038 seconds (JVM running for 4.894)
+2021-12-20 01:13:32 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - app started
+2021-12-20 01:13:32 [main] INFO  c.m.d.k.a.c.client.KafkaAdminClient - creating 1 kafka topics attempt 0 
+2021-12-20 01:13:33 [main] INFO  c.m.d.k.a.c.client.KafkaAdminClient - creating 1 kafka topics attempt 1 
+2021-12-20 01:13:35 [main] INFO  c.m.d.k.a.c.client.KafkaAdminClient - creating 1 kafka topics attempt 2 
+2021-12-20 01:13:35 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-12-20 01:13:35 [main] ERROR o.s.boot.SpringApplication - Application run failed
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:798)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:779)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:322)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at com.microservices.demo.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:32)
+Caused by: java.lang.RuntimeException: Reached max number of retry for creating kafka topics
+	at com.microservices.demo.kafka.admin.config.client.KafkaAdminClient.createTopics(KafkaAdminClient.java:47)
+	at com.microservices.demo.twitter.to.kafka.service.init.impl.KafkaStreamInitializer.init(KafkaStreamInitializer.java:23)
+	at com.microservices.demo.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:41)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:795)
+	... 5 common frames omitted
+2021-12-20 01:13:35 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Closing kafka producer!
+2021-12-20 01:13:59 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication on DESKTOP-HD6CG2B with PID 11052 (C:\Workspaces\EventDrivenMicroservices\microservices-demo\twitter-to-kafka-service\target\classes started by DELL in C:\Workspaces\EventDrivenMicroservices\microservices-demo)
+2021-12-20 01:13:59 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - No active profile set, falling back to default profiles: default
+2021-12-20 01:14:01 [main] INFO  o.a.k.c.admin.AdminClientConfig - AdminClientConfig values: 
+	bootstrap.servers = [localhost:19092, localhost:29092, localhost:39092]
+	client.dns.lookup = default
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2021-12-20 01:14:01 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 2.5.1
+2021-12-20 01:14:01 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 0efa8fb0f4c73d92
+2021-12-20 01:14:01 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1639943041658
+2021-12-20 01:14:02 [main] INFO  o.s.b.w.e.netty.NettyWebServer - Netty started on port(s): 8080
+2021-12-20 01:14:02 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Started TwitterToKafkaServiceApplication in 4.325 seconds (JVM running for 5.041)
+2021-12-20 01:14:02 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - app started
+2021-12-20 01:14:02 [main] INFO  c.m.d.k.a.c.client.KafkaAdminClient - creating 1 kafka topics attempt 0 
+2021-12-20 01:14:03 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -3 (localhost/127.0.0.1:39092) could not be established. Broker may not be available.
+2021-12-20 01:14:03 [main] INFO  c.m.d.k.a.c.client.KafkaAdminClient - creating 1 kafka topics attempt 1 
+2021-12-20 01:14:05 [main] INFO  c.m.d.k.a.c.client.KafkaAdminClient - creating 1 kafka topics attempt 2 
+2021-12-20 01:14:05 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-12-20 01:14:05 [main] ERROR o.s.boot.SpringApplication - Application run failed
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:798)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:779)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:322)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at com.microservices.demo.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:32)
+Caused by: java.lang.RuntimeException: Reached max number of retry for creating kafka topics
+	at com.microservices.demo.kafka.admin.config.client.KafkaAdminClient.createTopics(KafkaAdminClient.java:47)
+	at com.microservices.demo.twitter.to.kafka.service.init.impl.KafkaStreamInitializer.init(KafkaStreamInitializer.java:23)
+	at com.microservices.demo.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:41)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:795)
+	... 5 common frames omitted
+2021-12-20 01:14:05 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Closing kafka producer!
+2021-12-20 01:14:12 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication on DESKTOP-HD6CG2B with PID 14724 (C:\Workspaces\EventDrivenMicroservices\microservices-demo\twitter-to-kafka-service\target\classes started by DELL in C:\Workspaces\EventDrivenMicroservices\microservices-demo)
+2021-12-20 01:14:12 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - No active profile set, falling back to default profiles: default
+2021-12-20 01:14:14 [main] INFO  o.a.k.c.admin.AdminClientConfig - AdminClientConfig values: 
+	bootstrap.servers = [localhost:19092, localhost:29092, localhost:39092]
+	client.dns.lookup = default
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2021-12-20 01:14:14 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 2.5.1
+2021-12-20 01:14:14 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 0efa8fb0f4c73d92
+2021-12-20 01:14:14 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1639943054733
+2021-12-20 01:14:15 [main] INFO  o.s.b.w.e.netty.NettyWebServer - Netty started on port(s): 8080
+2021-12-20 01:14:15 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Started TwitterToKafkaServiceApplication in 3.478 seconds (JVM running for 4.224)
+2021-12-20 01:14:15 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - app started
+2021-12-20 01:14:15 [main] INFO  c.m.d.k.a.c.client.KafkaAdminClient - creating 1 kafka topics attempt 0 
+2021-12-20 01:14:16 [main] INFO  c.m.d.k.a.c.client.KafkaAdminClient - creating 1 kafka topics attempt 1 
+2021-12-20 01:14:16 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -3 (localhost/127.0.0.1:39092) could not be established. Broker may not be available.
+2021-12-20 01:14:18 [main] INFO  c.m.d.k.a.c.client.KafkaAdminClient - creating 1 kafka topics attempt 2 
+2021-12-20 01:14:18 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-12-20 01:14:18 [main] ERROR o.s.boot.SpringApplication - Application run failed
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:798)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:779)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:322)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at com.microservices.demo.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:32)
+Caused by: java.lang.RuntimeException: Reached max number of retry for creating kafka topics
+	at com.microservices.demo.kafka.admin.config.client.KafkaAdminClient.createTopics(KafkaAdminClient.java:47)
+	at com.microservices.demo.twitter.to.kafka.service.init.impl.KafkaStreamInitializer.init(KafkaStreamInitializer.java:23)
+	at com.microservices.demo.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:41)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:795)
+	... 5 common frames omitted
+2021-12-20 01:14:18 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Closing kafka producer!
+2021-12-20 01:22:58 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication on DESKTOP-HD6CG2B with PID 4700 (C:\Workspaces\EventDrivenMicroservices\microservices-demo\twitter-to-kafka-service\target\classes started by DELL in C:\Workspaces\EventDrivenMicroservices\microservices-demo)
+2021-12-20 01:22:58 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - No active profile set, falling back to default profiles: default
+2021-12-20 01:23:00 [main] INFO  o.a.k.c.admin.AdminClientConfig - AdminClientConfig values: 
+	bootstrap.servers = [localhost:19092, localhost:29092, localhost:39092]
+	client.dns.lookup = default
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2021-12-20 01:23:00 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 2.5.1
+2021-12-20 01:23:00 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 0efa8fb0f4c73d92
+2021-12-20 01:23:00 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1639943580811
+2021-12-20 01:23:02 [main] INFO  o.s.b.w.e.netty.NettyWebServer - Netty started on port(s): 8080
+2021-12-20 01:23:02 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Started TwitterToKafkaServiceApplication in 5.949 seconds (JVM running for 7.643)
+2021-12-20 01:23:02 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - app started
+2021-12-20 01:23:02 [main] INFO  c.m.d.k.a.c.client.KafkaAdminClient - creating 1 kafka topics attempt 0 
+2021-12-20 01:23:03 [main] INFO  c.m.d.k.a.c.client.KafkaAdminClient - creating 1 kafka topics attempt 1 
+2021-12-20 01:23:05 [main] INFO  c.m.d.k.a.c.client.KafkaAdminClient - creating 1 kafka topics attempt 2 
+2021-12-20 01:23:05 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-12-20 01:23:05 [main] ERROR o.s.boot.SpringApplication - Application run failed
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:798)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:779)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:322)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at com.microservices.demo.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:32)
+Caused by: java.lang.RuntimeException: Reached max number of retry for creating kafka topics
+	at com.microservices.demo.kafka.admin.config.client.KafkaAdminClient.createTopics(KafkaAdminClient.java:47)
+	at com.microservices.demo.twitter.to.kafka.service.init.impl.KafkaStreamInitializer.init(KafkaStreamInitializer.java:23)
+	at com.microservices.demo.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:41)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:795)
+	... 5 common frames omitted
+2021-12-20 01:23:05 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Closing kafka producer!
+2021-12-20 01:27:46 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication on DESKTOP-HD6CG2B with PID 12708 (C:\Workspaces\EventDrivenMicroservices\microservices-demo\twitter-to-kafka-service\target\classes started by DELL in C:\Workspaces\EventDrivenMicroservices\microservices-demo)
+2021-12-20 01:27:46 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - No active profile set, falling back to default profiles: default
+2021-12-20 01:27:48 [main] INFO  o.a.k.c.admin.AdminClientConfig - AdminClientConfig values: 
+	bootstrap.servers = [localhost:19092, localhost:29092, localhost:39092]
+	client.dns.lookup = default
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2021-12-20 01:27:48 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 2.5.1
+2021-12-20 01:27:48 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 0efa8fb0f4c73d92
+2021-12-20 01:27:48 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1639943868966
+2021-12-20 01:27:50 [main] INFO  o.s.b.w.e.netty.NettyWebServer - Netty started on port(s): 8080
+2021-12-20 01:27:50 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Started TwitterToKafkaServiceApplication in 5.209 seconds (JVM running for 6.234)
+2021-12-20 01:27:50 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - app started
+2021-12-20 01:27:50 [main] INFO  c.m.d.k.a.c.client.KafkaAdminClient - creating 1 kafka topics attempt 0 
+2021-12-20 01:27:51 [main] INFO  c.m.d.k.a.c.client.KafkaAdminClient - creating 1 kafka topics attempt 1 
+2021-12-20 01:27:53 [main] INFO  c.m.d.k.a.c.client.KafkaAdminClient - creating 1 kafka topics attempt 2 
+2021-12-20 01:27:53 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-12-20 01:27:53 [main] ERROR o.s.boot.SpringApplication - Application run failed
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:798)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:779)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:322)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at com.microservices.demo.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:32)
+Caused by: java.lang.RuntimeException: Reached max number of retry for creating kafka topics
+	at com.microservices.demo.kafka.admin.config.client.KafkaAdminClient.createTopics(KafkaAdminClient.java:49)
+	at com.microservices.demo.twitter.to.kafka.service.init.impl.KafkaStreamInitializer.init(KafkaStreamInitializer.java:23)
+	at com.microservices.demo.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:41)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:795)
+	... 5 common frames omitted
+2021-12-20 01:27:53 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Closing kafka producer!
