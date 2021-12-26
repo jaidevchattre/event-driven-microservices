@@ -10,7 +10,7 @@ Docker Compose -schemaregisty, zookeeper and Kafka brokers
 
 Part 2: Externalized Configuration Microservice Pattern
 This involved
-1.Created a git repo  cofig-server-repository with .yml files for specific microservice configuration
+1.Created a git repo  config-server-repository with .yml files for specific microservice configuration
 2.Created a config-server module as below
    1.Add dependencies for spring-cloud,spring-boot-autoconfigure,spring-cloud-starter-bootstrap
    2.application.yml - port 8888 logging levels
